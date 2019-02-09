@@ -1,1 +1,4 @@
+001  George Strait   123 Fake St        MN  55108
+002  Allan Jackson   9548 Mountain Dr   MN  55118
+003  Darius Ruckers  5042 Country Blvd  MN  55109
 004  Garth Brooks    364 Lake Ave       MN  55119
