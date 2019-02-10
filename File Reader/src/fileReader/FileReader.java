@@ -23,22 +23,26 @@ public class FileReader {
 			Scanner scanner = new Scanner(input);
 			PrintWriter printer = new PrintWriter(output);
 			
-			while(scanner.hasNextLine()) {
+			while (scanner.hasNextLine()) {
 				String s = scanner.nextLine();
 				// substring is not the most efficient, but works for now
-				id = (s.substring(0, 3));
-				write(printer, id);
+				// not ideal for maintainability
+				// trim removes spaces
+				id = (s.substring(0, 3).trim());
 				firstName = (s.substring(5, 12).trim());
-				write(printer, firstName);
 				lastName = (s.substring(12, 22).trim());
-				write(printer, lastName);
 				houseNumber = (s.substring(24, 30).trim());
-				write(printer, houseNumber);
 				street = (s.substring(30, 42).trim());
-				write(printer, street);
 				state = (s.substring(44, 46).trim());
-				write(printer, state);
 				zipCode = (s.substring(48, 53).trim());
+				
+				// call write function to print to output file
+				write(printer, id);
+				write(printer, firstName);
+				write(printer, lastName);
+				write(printer, houseNumber);
+				write(printer, street);
+				write(printer, state);
 				write(printer, zipCode);
 				printer.write("\n");
 				// .close() only outputs the first line
